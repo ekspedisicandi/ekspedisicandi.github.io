@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Ekspedisi Candi (Temple Expedition)</title>
+    <link rel="icon" href="assets/logo.png">
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+      #panel {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        margin-left: -180px;
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+      }
+    </style>
+    <style>
+      #directions-panel {
+        height: 100%;
+        float: right;
+        width: 390px;
+        overflow: auto;
+      }
+
+      #map-canvas {
+        margin-right: 400px;
+      }
+
+      #control {
+        background: #fff;
+        padding: 5px;
+        font-size: 14px;
+        font-family: Arial;
+        border: 1px solid #ccc;
+        box-shadow: 0 2px 2px rgba(33, 33, 33, 0.4);
+        display: none;
+      }
+
+      @media print {
+        #map-canvas {
+          height: 500px;
+          margin: 0;
+        }
+
+        #directions-panel {
+          float: none;
+          width: auto;
+        }
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+    <script>
+var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
+
+function initialize() {
+  directionsDisplay = new google.maps.DirectionsRenderer();
+  var mapOptions = {
+    zoom: 7,
+    center: new google.maps.LatLng(41.850033, -87.6500523)
+  };
+  var map = new google.maps.Map(document.getElementById('map-canvas'),
+      mapOptions);
+  directionsDisplay.setMap(map);
+  directionsDisplay.setPanel(document.getElementById('directions-panel'));
+
+  var control = document.getElementById('control');
+  control.style.display = 'block';
+  map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
+}
+
+function calcRoute() {
+  var start = document.getElementById('start').value;
+  var end = document.getElementById('end').value;
+  var request = {
+    origin: start,
+    destination: end,
+    travelMode: google.maps.TravelMode.DRIVING
+  };
+  directionsService.route(request, function(response, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+      directionsDisplay.setDirections(response);
+    }
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+    <div id="control">
+      <strong>Start:</strong>
+      <select id="start" onchange="calcRoute();">
+          <option value="-7.777990,110.494077">Banyunibo</option>
+          <option value="-7.775686,110.497350">Barong</option>
+          <option value="-7.607873800000000000,110.203751300000020000">Borobudur</option>
+	      <option value="-7.774323,110.497508">Dawangsari</option>
+	      <option value="-7.749618,110.415891">Gebang</option>
+	      <option value="-7.783776,110.512115">Ijo</option>
+          <option value="-7.771527,110.490738">Istana Ratu Boko</option>
+          <option value="-7.767273,110.472357">Kalasan</option>
+          <option value="-7.757960,110.469583">Kedulan</option>
+          <option value="-7.604803,110.230132">Mendut</option>
+          <option value="-7.776383,110.489627">Palgading</option>
+          <option value="-7.606117,110.219550">Pawon</option>
+          <option value="-7.740831,110.504616">Plaosan</option>
+	      <option value="-7.752023200000000000,110.491368800000030000">Prambanan</option>
+	      <option value="-7.762473,110.447131">Sambisari</option>
+	      <option value="-7.761527,110.474274">Sari</option>
+	      <option value="-7.743928,110.492851">Sewu</option>
+	      <option value="-7.761151,110.496080">Sojiwan</option>
+      </select>
+      <strong>End:</strong>
+      <select id="end" onchange="calcRoute();">
+          <option value="-7.777990,110.494077">Banyunibo</option>
+          <option value="-7.775686,110.497350">Barong</option>
+          <option value="-7.607873800000000000,110.203751300000020000">Borobudur</option>
+	      <option value="-7.774323,110.497508">Dawangsari</option>
+	      <option value="-7.749618,110.415891">Gebang</option>
+	      <option value="-7.783776,110.512115">Ijo</option>
+          <option value="-7.771527,110.490738">Istana Ratu Boko</option>
+          <option value="-7.767273,110.472357">Kalasan</option>
+          <option value="-7.757960,110.469583">Kedulan</option>
+          <option value="-7.604803,110.230132">Mendut</option>
+          <option value="-7.776383,110.489627">Palgading</option>
+          <option value="-7.606117,110.219550">Pawon</option>
+          <option value="-7.740831,110.504616">Plaosan</option>
+	      <option value="-7.752023200000000000,110.491368800000030000">Prambanan</option>
+	      <option value="-7.762473,110.447131">Sambisari</option>
+	      <option value="-7.761527,110.474274">Sari</option>
+	      <option value="-7.743928,110.492851">Sewu</option>
+	      <option value="-7.761151,110.496080">Sojiwan</option>
+      </select>
+    </div>
+    <div id="directions-panel"></div>
+    <div id="map-canvas"></div>
+  </body>
+</html>

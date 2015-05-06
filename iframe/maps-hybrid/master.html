@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="id">
+<head profile="http://gmpg.org/xfn/11">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="google-site-verification" content="xgTm6DXW0WWUh9D9GKQNwd2IaO4HEWr9fztqqFnhsOE" />
+<meta name="description" content="Ekspedisi Candi">
+<meta name="keywords" content="Ekspedisi Candi, Indonesia, Sleman, Yogyakarta, Borobudur, Prambanan, Istana Ratu Boko, Banyunibo, Kalasan, Sambisari, Plaosan, Ijo, Petunjuk Arah, Peta, Cuaca, Panorama, Harga Tiket,">
+<meta name="author" content="Tim Ekspedisi candi Indonesia">
+
+<!--BROWSER TITLE-->
+<title>Target Ekspedisi Candi</title>
+
+<!--GOOGLE CUSTOM FONT LINK-->
+<link href='http://fonts.googleapis.com/css?family=Gruppo' rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="../../assets/css/target.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../assets/css/prettyPhoto.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../assets/css/twitter.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../assets/css/octicons.css">
+<link rel="shortcut icon" href="../../assets/images/favicon.png" />
+
+<!--SCRIPTS-->
+<script type="text/javascript" src="../../assets/js/jquery.min.js"></script>
+<script type="text/javascript" src="../../assets/js/jquery-ui-1.8.13.custom.min.js"></script>
+<script type="text/javascript" src="../../assets/js/prettyphoto.js"></script>
+<script type="text/javascript" src="../../assets/js/activity.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="../../assets/js/gmap3.min.js"></script>
+<script type="text/javascript" src="../../assets/js/jquery.backstretch.min.js"></script>
+<script type="text/javascript" src="../../assets/js/jquery.animate-colors-min.js"></script>
+<script type="text/javascript" src="../../assets/js/custom.js"></script>
+<script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+<script type="text/javascript" src="../../assets/js/jquery.countTo.js"></script>
+
+</head>
+
+<body>
+
+    
+
+<div id="gMap"></div>
+
+
+
+<div id="loading"></div>
+
+<div id="contentContainer">
+	<div id="content">
+	
+	<script type="text/javascript">
+	//<![CDATA[
+	jQuery.noConflict(); jQuery(document).ready(function(){  
+    	//MAP ZOOM (0 to 20)
+    	var zoomLevel = 15,
+		gMap = jQuery("#gMap"),
+		//iPad,iPhone,iPod...
+		deviceAgent = navigator.userAgent.toLowerCase(),
+		iPadiPhone = deviceAgent.match(/(iphone|ipod|ipad)/);
+		
+	//iPad Stuff
+	if (iPadiPhone) {
+		//ADD MAP CONTROLS AND POST ARROWS
+		jQuery("#footer").prepend('<div class="markerNav" title="Prev" id="prevMarker">&lsaquo;</div><div id="markers"></div><div class="markerNav" title="Next" id="nextMarker">&rsaquo;</div><div id="mapTypeContainer"><div id="mapStyleContainer"><div id="mapStyle" class="satellite"></div></div><div id="mapType" title="Map Type" class="satellite"></div></div>');
+	} else {//IF NOT iPad
+		jQuery('#zoomIn').live('click',function(){
+			zoomLevel += 1;
+			gMap.gmap3({action: 'setOptions', args:[{zoom:zoomLevel}]});
+		});
+		jQuery('#zoomOut').live('click',function(){
+			zoomLevel -= 1;
+			gMap.gmap3({action: 'setOptions', args:[{zoom:zoomLevel}]});
+		});
+		//ADD MAP CONTROLS AND POST ARROWS
+      	jQuery("#footer").prepend('<div class="markerNav" title="Prev" id="prevMarker">&lsaquo;</div><div id="markers"></div><div class="markerNav" title="Next" id="nextMarker">&rsaquo;</div><div id="mapTypeContainer"><div id="mapStyleContainer"><div id="mapStyle" class="satellite"></div></div><div id="mapType" title="Map Type" class="satellite"></div></div>');
+    }    
+        jQuery('body').prepend("<div id='target'></div>");
+        
+        gMap.gmap3({ 
+        	action: 'init',
+            onces: {
+              bounds_changed: function(){
+              	var number = 0;
+                jQuery(this).gmap3({
+                  action:'getBounds', 
+                  callback: function (){
+//ADD MARKERS HERE - FORMAT IS AS FOLLOWS...
+//add(jQuery(this), number += 1, "NAME", "URL","ADDRESS1<br />ADDRESS2","LATITUDE","LONGITUDE", 'THUMBNAIL');
+
+add(jQuery(this), number += 1, "Candi Prambanan", "","Sleman, Yogyakarta, Indonesia <br/><br/>Koordinat: -07.7520232°, 110.4913688°<br/>GPS: -07°45.12139',110°29.48213'<br/>49MDM4391543082","-7.752023200000000000","110.491368800000030000", '<img width="95" height="95" src="images/prambanan-95x95.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Borobudur", "","Magelang, Jawa Tengah, Indonesia <br/><br/> Koordinat: -07.6078738°, 110.2037513°<br/>GPS: -07°36.47243', 110°12.22508'<br/>49MDM1216958971","-7.607873800000000000","110.203751300000020000", '<img width="95" height="95" src="images/borobudur-95x95.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Istana Ratu Boko", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: -07.7715270°, 110.4907380°<br/> GPS: -07°46.29162', 110°29.44428'<br/>49MDM4384840926","-7.771527","110.490738", '<img width="95" height="95" src="images/ratuboko-95x95.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Ijo", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: -07.7837760°, 110.5121150°<br/>GPS: -07°47.02656', 110°30.72690'<br/>49MDM4620639574","-7.783776","110.512115", '<img width="95" height="95" src="images/ijo-95x95.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Barong", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: -07.7756860°, 110.4973500°; GPS: -07°46.54116', 110°29.84100'<br/>49MDM4457740467","-7.775686","110.497350", '<img width="95" height="95" src="images/barong-95x95.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Kalasan", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: -07.7672730°, 110.4723570°<br/>GPS: -07°46.03638', 110°28.34142'<br/>49MDM4182041394","-7.767273","110.472357", '<img width="95" height="95" src="images/kalasan-95x95.jpg" alt=""" />');
+
+add(jQuery(this), number += 1, "Candi Sari", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: -07.7615270°, 110.4742740°<br/>GPS: -07°45.69162', 110°28.45644'<br/>49MDM4203142029","-7.761527","110.474274", '<img width="95" height="95" src="images/sari-95x95.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Banyunibo", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: -07.7779900°, 110.4940770°<br/>GPS: -07°46.67940', 110°29.64462'<br/>49MDM4421740212","-7.777990","110.494077", '<img width="95" height="95" src="images/banyunibo-95x95.jpg" alt=""" />'); 
+
+add(jQuery(this), number += 1, "Candi Sambisari", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: -07.7624730°, 110.4471310°<br/>GPS: -07°45.74838', 110°26.82786'<br/>49MDM3903841921","-7.762473","110.447131", '<img width="95" height="95" src="images/sambisari-95x95.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Sewu", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: -07.7439280°, 110.4928510°<br/>GPS: -07°44.63568', 110°29.57106'<br/>49MDM4407743977","-7.743928","110.492851", '<img width="95" height="95" src="images/sewu-95x95.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Plaosan", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: -07.7408310°, 110.5046160°<br/>GPS: -07°44.44986', 110°30.27696'<br/>49MDM4537444321","-7.740831","110.504616", '<img width="95" height="95" src="images/plaosan-95x95.jpg" alt="" />');    
+                      
+add(jQuery(this), number += 1, "Candi Sojiwan", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: -07.7752770°, 110.5247190°<br/>-07°46.51662', 110°31.48314'<br/>49MDM4759540516","-7.761151","110.496080", '<img width="95" height="95" src="images/sojiwan-95x95.jpg" alt="" />');  
+
+add(jQuery(this), number += 1, "Candi Pawon", "","Magelang, Jawa Tengah, Indonesia <br/><br/> Koordinat: -07.6061170°, 110.2195500°<br/>GPS: -07°36.36702', 110°13.17300'<br/>49MDM1391159168","-7.606117","110.219550", '<img width="95" height="95" src="images/pawon-95x95.jpg" alt="" />');  
+
+add(jQuery(this), number += 1, "Candi Mendut", "","Magelang, Jawa Tengah, Indonesia <br/><br/> Koordinat: -07.6048030°, 110.2301320°<br/>GPS: -07°36.28818', 110°13.80792'<br/>49MDM1507859315","-7.604803","110.230132", '<img width="95" height="95" src="images/mendut-95x95.jpg" alt="" />'); 
+
+add(jQuery(this), number += 1, "Candi Gebang", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: -07.7496180°, 110.4158910°<br/> GPS: -07°44.97708', 110°24.95346'<br/>49MDM3559143337","-7.749618","110.415891", '<img width="95" height="95" src="images/gebang-95x95.jpg" alt="" />');  
+
+add(jQuery(this), number += 1, "Candi Kedulan", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: -07.7579600°, 110.4695830°<br/>GPS: -07°45.47760', 110°28.17498'<br/>49MDM4151342423","-7.757960","110.469583", '<img width="95" height="95" src="images/kedulan-95x95.jpg" alt="" />'); 
+
+add(jQuery(this), number += 1, "Candi Palgading", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: -07.7763830°, 110.4896270°<br/>GPS: -07°46.58298', 110°29.37762'<br/>49MDM4372640389","-7.776383","110.489627", '<img width="95" height="95" src="images/palgading-95x95.jpg" alt="" />'); 
+
+add(jQuery(this), number += 1, "Situs Dawangsari", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: 	-07.7743230°, 110.4975080°<br/>GPS: 	-07°46.45938', 110°29.85048'<br/>49MDM4459540618","-7.774323","110.497508", '<img width="95" height="95" src="images/dawangsari-95x95.jpg" alt="" />'); 
+
+add(jQuery(this), number += 1, "Candi Miri", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: 	-07.7710620°, 110.5060610°<br/>GPS: -07°46.26372', 110°30.36366'<br/>49MDM4553740979","-7.771062","110.506061", '<img width="95" height="95" src="images/miri-95x95.jpg" alt="" />');  
+
+add(jQuery(this), number += 1, "Candi Gampingan", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: -07.8354080°, 110.4366350°<br/>GPS: -07°50.12448', 110°26.19810'<br/>49MDM3789233856","-7.835656","110.437252", '<img width="95" height="95" src="images/gampingan-95x95.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Morangan", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: -07.6833810°, 110.4682910°<br/>GPS: -07°41.00286', 110°28.09746'<br/>49MDM4136050668","-7.683381 ","110.468291", '<img width="95" height="95" src="images/morangan-95x95.jpg" alt="" />'); 
+
+add(jQuery(this), number += 1, "Komplek Candi Arjuna (Dieng)", "","Banjarnegara, Jawa Tengah, Indonesia <br/><br/> Koordinat: -07.2052230°, 109.9068850°<br/>GPS: -07°12.31338', 109°54.41310'<br/>49MCN7931003419","-7.205223","109.906885", '<img width="95" height="95" src="images/dieng-95x95.jpg" alt="" />'); 
+
+add(jQuery(this), number += 1, "Candi Gana (Asu)", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: 	-07.7439780°, 110.4961430°<br/>GPS: -07°44.63868', 110°29.76858'<br/>49MDM4444043972","-7.743978","110.496143", '<img width="95" height="95" src="images/gana-95x95.jpg" alt="" />'); 
+
+add(jQuery(this), number += 1, "Candi Polangan", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: 	-07.7868850°, 110.4899600°<br/>GPS: -07°47.21310', 110°29.39760'<br/>49MDM4376439228","-7.786885","110.489960", '<img width="95" height="95" src="images/polangan-95x95.jpg" alt="" />'); 
+
+add(jQuery(this), number += 1, "Situs Arca Bugisan", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: -07.7592230°, 110.4818540°<br/>GPS: -07°45.55338', 110°28.91124'<br/>49MDM4286642285","-7.759223","110.481854", '<img width="95" height="95" src="images/arcabugisan-95x95.jpg" alt="" />'); 
+
+add(jQuery(this), number += 1, "Candi Kadisoka", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: 	-07.7553590°, 110.4459590°<br/>GPS: -07°45.32154', 110°26.75754'<br/>49MDM3890842707","-7.755359","110.445959", '<img width="95" height="95" src="images/kadisoka-95x95.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Kimpulan", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: -07.6883800°, 110.4153790°<br/>GPS: -07°41.30280', 110°24.92274'<br/>49MDM3552650107","-7.688380","110.415379", '<img width="95" height="95" src="images/kimpulan-95x95.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Situs Condongcatur", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: -07.7572110°, 110.3964230°<br/>GPS: -07°45.43266', 110°23.78538'<br/>49MDM3344642495","-7.757211","110.396423", '<img width="95" height="95" src="images/condongcatur-95x95.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Abang", "","Sleman, Yogyakarta, Indonesia <br/><br/> Koordinat: -07.8103600°, 110.4686200°<br/>GPS: -07°48.62160', 110°28.11720'<br/>49MDM4141436630","-7.810360","110.468620", '<img width="95" height="95" src="images/abang-95x95.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Situs Gembirowati", "","Gunung Kidul, Yogyakarta, Indonesia <br/><br/> Koordinat: -08.0079310°, 110.3409690°<br/>GPS: -08°00.47586', 110°20.45814'<br/>49LDM2737514767","-8.007931","110.340969", '<img width="95" height="95" src="images/gembirowati-95x95.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Gunung Sari", "","Magelang, Jawa Tengah, Indonesia <br/><br/> Koordinat: -07.6021870°, 110.2832770°<br/>GPS: -07°36.13122', 110°16.99662'<br/>49MDM2094159615","-7.602187","110.283277", '<img width="95" height="95" src="images/gunungsari-95x95.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Gunung Wukir", "","Magelang, Jawa Tengah, Indonesia <br/><br/> Koordinat: -07.6342440°, 110.2967490°<br/>GPS: -07°38.05464', 110°17.80494'<br/>49MDM2243256073","-7.634244","110.296749", '<img width="95" height="95" src="images/gunungwukir-95x95.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Singosari", "","DALAM VERIFIKASI DATA<br/><br/>","-7.887799","112.663826", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Jawi", "","DALAM VERIFIKASI DATA<br/><br/>","-7.662498","112.669910", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Gununggangsir", "","DALAM VERIFIKASI DATA<br/><br/>","-7.586849","112.733459", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Panataran", "","DALAM VERIFIKASI DATA<br/><br/>","-8.016437","112.209732", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Sawentar", "","DALAM VERIFIKASI DATA<br/><br/>","-8.098810","112.235314", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Tegowangi", "","DALAM VERIFIKASI DATA<br/><br/>","-7.734648","112.161194", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Surawana", "","DALAM VERIFIKASI DATA<br/><br/>","-7.746182","112.218060", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Rimbi", "","DALAM VERIFIKASI DATA<br/><br/>","-7.673699","112.342983", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Wringinlawang", "","DALAM VERIFIKASI DATA<br/><br/>","-7.542062","112.391076", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Tikus", "","DALAM VERIFIKASI DATA<br/><br/>","-7.571755","112.403525", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Bajangratu", "","DALAM VERIFIKASI DATA<br/><br/>","-7.567726","112.398746", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Lumbung", "","Sleman, Yogyakarta, Indonesia<br/><br/>Koordinat: -07.7481360°, 110.4929140°<br/>GPS: -07°44.88816', 110°29.57484'<br/>49MDM4408543512","-7.748136","110.492914", '<img width="95" height="95" src="images/lumbung-95x95.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Bubrah", "","Sleman, Yogyakarta, Indonesia<br/><br/>Koordinat: -07.7465380°, 110.4929100°<br/>GPS: -07°44.79228', 110°29.57460'<br/>49MDM4408443689","-7.746538","110.492910", '<img width="95" height="95" src="images/bubrah-95x95.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Gedong Songo", "","DALAM VERIFIKASI DATA<br/><br/>","-7.210760","110.342185", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Asu Sengi", "","DALAM VERIFIKASI DATA<br/><br/>","-7.527404","110.351657", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Pendem", "","DALAM VERIFIKASI DATA<br/><br/>","-7.525693","110.351914", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Utama", "","DALAM VERIFIKASI DATA<br/><br/>","-8.005791","112.764159", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Srikandi", "","DALAM VERIFIKASI DATA<br/><br/>","-7.205035","109.906921", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Setyaki", "","DALAM VERIFIKASI DATA<br/><br/>","-7.204854","109.905256", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Margasari", "","DALAM VERIFIKASI DATA<br/><br/>","-7.197588","109.910842", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Kidal", "","DALAM VERIFIKASI DATA<br/><br/>","-8.025647","112.708480", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Badut", "","DALAM VERIFIKASI DATA<br/><br/>","-7.957782","112.598608", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Agung", "","DALAM VERIFIKASI DATA<br/><br/>","-8.080496","113.299075", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Sumberawan", "","DALAM VERIFIKASI DATA<br/><br/>","-7.855387","112.644731", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Jabung", "","DALAM VERIFIKASI DATA<br/><br/>","-7.735268","113.471651", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Komplek Percandian Kaliworo", "","DALAM VERIFIKASI DATA<br/><br/>","-7.664444","110.505833", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Ngemplakseneng", "","DALAM VERIFIKASI DATA<br/><br/>","-7.665833","110.505000", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Karangnongko", "","DALAM VERIFIKASI DATA<br/><br/>","-7.677217","110.557110", '<img width="95" height="95" src="images/.jpg" alt="" />');
+
+add(jQuery(this), number += 1, "Candi Hati Kudus Tuhan Yesus Ganjuran", "","Bantul, Yogyakarta, Indonesia<br/><br/>-07°55.58940', 110°19.15098'<br/>49MDM2495923767","-7.926490","110.319183", '<img width="95" height="95" src="images/ganjuran-95x95.jpg" alt="" />');
+
+                  }
+                });
+              }
+            }
+          },{ 
+			action: 'setOptions', args:[{
+				zoom:zoomLevel,
+				scrollwheel:true,
+				disableDefaultUI:true,
+				disableDoubleClickZoom:true,
+				draggable:true,
+				mapTypeControl:false,
+				panControl:false,
+				scaleControl:false,
+				streetViewControl:false,
+				zoomControl:false,
+				//MAP TYPE: 'roadmap', 'satellite', 'hybrid'
+				mapTypeId:'satellite'
+			}]
+		});
+        function add(jQuerythis, i, title, link, excerpt, lati, longi, img){
+          jQuerythis.gmap3({
+            action : 'addMarker',
+            lat:lati,
+            lng:longi,
+            //PIN MARKER IMAGE
+            options: {icon: new google.maps.MarkerImage('../../assets/images/pin.png')},
+            events:{
+       			mouseover: function(marker){
+          			jQuerythis.css({cursor:'pointer'});
+          			jQuery('#markerTitle'+i+'').fadeIn({ duration: 200, queue: false }).animate({bottom:"32px"},{duration:200,queue:false});
+          			jQuery('.markerInfo').removeClass('activeInfo').hide();
+          			jQuery('#markerInfo'+i+'').addClass('activeInfo').show();
+          			jQuery('.marker').removeClass('activeMarker');
+          			jQuery('#marker'+i+'').addClass('activeMarker');
+      			},
+       			mouseout: function(){
+          			jQuerythis.css({cursor:'default'});
+          			jQuery('#markerTitle'+i+'').stop(true,true).fadeOut(200,function(){jQuery(this).css({bottom:"0"})});
+      			},
+      			click: function(marker){window.location = link}
+   			},
+            callback: function(marker){
+              var jQuerybutton = jQuery('<div id="marker'+i+'" class="marker"><a href="'+link+'">'+img+'</a><h2><a href="'+link+'">'+title+'</a></h2><p>'+excerpt+'</p><a class="markerLink" href="'+link+'">Lihat Peta &rarr;</a><div class="markerTotal">'+i+' / <span></span></div></div>');
+              jQuerybutton.mouseover(function(){
+                  jQuerythis.gmap3({
+                    action:'panTo', 
+                    args:[marker.position]
+                  });
+                  jQuery("#target").stop(true,true).fadeIn(1200).delay(500).fadeOut(1200);
+               });
+              jQuery('#markers').append(jQuerybutton);
+              var numbers = jQuery(".markerInfo").length;
+              jQuery(".markerTotal span").html(numbers);
+              if(i == 1){
+              	jQuery('.marker:first-child').addClass('activeMarker').mouseover();
+              }
+              jQuerythis.gmap3({
+              	action:'addOverlay',
+              	content: '<div id="markerTitle'+i+'" class="markerTitle">'+title+'</div>',
+              	latLng: marker.getPosition()
+               });
+            }    		
+          });
+        }
+});
+//]]>
+</script>
+
+
+
+<div class="clear"></div>
+</div><!--end content-->
+</div><!--end contentContainer-->
+
+
+
+<div id="footer">
+</div><!--end footer-->
+
+
+
+</body>
+</html>

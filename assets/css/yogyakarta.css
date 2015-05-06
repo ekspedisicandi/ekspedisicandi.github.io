@@ -1,0 +1,240 @@
+@import url(http://fonts.googleapis.com/css?family=Fanwood+Text);
+html, body, #map-canvas {
+  font-family: 'Fanwood Text', serif;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.colors {
+  background: #f2f2f2;
+  box-size: border-box;
+  color: #666;
+  font-size: .75em;
+  max-height: 60%;
+  overflow: hidden;
+  right: 0;
+  padding: 1rem;
+  position: absolute;
+  top: 0;
+}
+.colors ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.colors ul li {
+  margin-bottom: .25rem;
+}
+.colors ul li i {
+  box-sizing: border-box;
+  display: inline-block;
+}
+.colors ul li:nth-of-type(1) i {
+  border: 2px solid #000;
+  height: .875em;
+  margin: .25rem .25rem 0 .75rem;
+  width: .875em;
+}
+.colors ul li:nth-of-type(2) i {
+  border: 2px solid #000;
+  height: .875em;
+  margin: .25rem .25rem 0 .75rem;
+  width: .875em;
+}
+.colors ul li:nth-of-type(3) i {
+  border: 2px solid #000;
+  height: .875em;
+  margin: .25rem .25rem 0 .75rem;
+  width: .875em;
+}
+.colors ul li:nth-of-type(4) i {
+  border: 2px solid #000;
+  height: .875em;
+  margin: .25rem .25rem 0 .75rem;
+  width: .875em;
+}
+.colors ul li:nth-of-type(5) i {
+  height: .75em;
+  margin: 0 .25rem 0 .75rem;
+  width: .75em;
+}
+.colors ul li:nth-of-type(6) i {
+  height: .75em;
+  margin: 0 .25rem 0 .75rem;
+  width: .75em;
+}
+.colors ul li:nth-of-type(7) i {
+  height: .75em;
+  margin: 0 .25rem 0 .75rem;
+  width: .75em;
+}
+.colors ul li:nth-of-type(8) i {
+  height: .75em;
+  margin: 0 .25rem 0 .75rem;
+  width: .75em;
+}
+.colors ul li:nth-of-type(9) i {
+  border: 2px solid #000;
+  height: .875em;
+  margin: .25rem .25rem 0 .75rem;
+  width: .875em;
+}
+.colors ul li:nth-of-type(10) i {
+  border: 2px solid #000;
+  height: .875em;
+  margin: .25rem .25rem 0 .75rem;
+  width: .875em;
+}
+.colors ul li:nth-of-type(11) i {
+  border: 2px solid #000;
+  height: .875em;
+  margin: .25rem .25rem 0 .75rem;
+  width: .875em;
+}
+.colors ul li:nth-of-type(12) i {
+  height: .75em;
+  margin: 0 .25rem 0 .75rem;
+  width: .75em;
+}
+.colors ul li:nth-of-type(13) i {
+  height: .75em;
+  margin: 0 .25rem 0 .75rem;
+  width: .75em;
+}
+.colors ul li:nth-of-type(14) i {
+  height: .75em;
+  margin: 0 .25rem 0 .75rem;
+  width: .75em;
+}
+.colors ul li:nth-of-type(15) i {
+  height: .75em;
+  margin: 0 .25rem 0 .75rem;
+  width: .75em;
+}
+.colors ul li:nth-of-type(16) i {
+  height: .75em;
+  margin: 0 .25rem 0 .75rem;
+  width: .75em;
+}
+.colors ul li:nth-of-type(1) i {
+  background: #33a02c;
+}
+.colors ul li:nth-of-type(2) i {
+  background: #b15928;
+}
+.colors ul li:nth-of-type(3) i {
+  background: #6a3d9a;
+}
+.colors ul li:nth-of-type(4) i {
+  background: #1f78b4;
+}
+.colors ul li:nth-of-type(5) i {
+  background: #33a02c;
+}
+.colors ul li:nth-of-type(6) i {
+  background: #b15928;
+}
+.colors ul li:nth-of-type(7) i {
+  background: #6a3d9a;
+}
+.colors ul li:nth-of-type(8) i {
+  background: #1f78b4;
+}
+.colors ul li:nth-of-type(9) i {
+  background: yellow;
+}
+.colors ul li:nth-of-type(10) i {
+  background: #e31a1c;
+}
+.colors ul li:nth-of-type(11) i {
+  background: #ff7f00;
+}
+.colors ul li:nth-of-type(12) i {
+  background: yellow;
+}
+.colors ul li:nth-of-type(13) i {
+  background: #e31a1c;
+}
+.colors ul li:nth-of-type(14) i {
+  background: #ff7f00;
+}
+.colors ul li:nth-of-type(15) i {
+  background: #cd6699;
+}
+.colors ul li:nth-of-type(16) i {
+  background: #fdbf6f;
+}
+
+#legend {
+  background: rgba(255, 250, 242, 0.95);
+  bottom: 0;
+  box-size: border-box;
+  color: #666;
+  font-size: 1em;
+  max-height: 40%;
+  overflow: scroll;
+  padding: 1rem 1.5rem;
+  position: absolute;
+  right: 0;
+}
+#legend ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#legend ul li {
+  line-height: 1.5em;
+  margin-bottom: .75em;
+}
+#legend ul li:last-of-type {
+  margin-bottom: 0;
+}
+#legend ul li label {
+  cursor: pointer;
+}
+#legend ul li input[type="checkbox"] {
+  cursor: pointer;
+  display: inline-block;
+  height: 1em;
+  margin-right: .5em;
+  position: relative;
+  top: 0;
+  width: 1em;
+}
+#legend ul li input[type="checkbox"]:after {
+  background: #fff;
+  border: .1675em solid #8fdaaa;
+  box-sizing: border-box;
+  border-radius: 50%;
+  color: #666;
+  content: '';
+  height: 1.5em;
+  left: -.25em;
+  position: absolute;
+  top: -.25em;
+  width: 1.5em;
+}
+#legend ul li input[type="checkbox"]:before {
+  background: #fff;
+  box-sizing: border-box;
+  border-radius: 50%;
+  content: '';
+  height: .75em;
+  left: .125em;
+  position: absolute;
+  top: .125em;
+  width: .75em;
+  z-index: 1;
+  transition: .1s all ease;
+}
+#legend ul li input[type="checkbox"]:checked:before {
+  background: #8fdaaa;
+}
+
+.gm-style-iw table tbody:first-child {
+  visibility: hidden;
+}
+.gm-style-iw table tbody table tbody:first-child {
+  visibility: visible;
+}

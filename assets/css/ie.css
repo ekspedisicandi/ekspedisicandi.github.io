@@ -1,0 +1,973 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: IE Stylesheet
+
+So instead of using the respond.js file to add media query support
+to IE, we're going to use SASS to create an easily readable css file.
+Here, we import all the styles the standard stylesheet gets, only
+without the media queries. No need to worry about editing anything!
+
+******************************************************************/
+/******************************************************************
+IMPORTS & DEPENDENCIES
+Remember, all the BASE styles are called already since IE can
+read those. Below, we need to import only the stuff IE can't
+understand (what's inside the media queries). We also need to
+import the mixins file so SASS can understand the variables.
+******************************************************************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/* $tan:               #eceee5; */
+/* $green:             #7dd667; */
+/* $bones-pink:        #f01d4f; */
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins Stylesheet
+
+This is where you can take advantage of Sass' great features: Mixins.
+I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+Helpful:
+http://sachagreif.com/useful-sass-mixins/
+http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+
+******************************************************************/
+/*********************
+TRANSITION
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+TOOLS
+*********************/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.image-replacement {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden; }
+
+/*
+use the best ampersand
+http://simplebits.com/notebook/2008/08/14/ampersands-2/
+*/
+span.amp {
+  font-family: Baskerville,'Goudy Old Style',Palatino,'Book Antiqua',serif !important;
+  font-style: italic; }
+
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
+
+/*********************
+BACKGROUND-SIZE: COVER
+*********************/
+/* @include background-size(cover); */
+/*********************
+BORDER RADIUS
+*********************/
+/* @include border-radius(10px); */
+/*********************
+INNER BOX SHADOW
+*********************/
+/* @include box-shadow(0, 0, 10px, rgba(0, 0, 0, 1), inset); */
+/*********************
+OPACITY
+*********************/
+/* @include hp-opacity(.7); */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: IE Grid Styles
+
+Since the example grid is based on media queries, so rather than
+setup some js library that would make IE8 and below understand
+media queries, let's just add some styles that serves a fixed grid.
+
+Again, if you want to roll your own, just remove this junk and put
+whatever you use in here.
+
+******************************************************************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection.
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.scss styles.
+
+******************************************************************/
+/*
+IMPORTANT NOTE ABOUT SASS 3.3 & UP
+You can't use @extend within media queries
+anymore, so just be aware that if you drop
+them in here, they won't work.
+*/
+/*********************
+NAVIGATION STYLES
+*********************/
+/* .menu is clearfixed inside mixins.scss */
+.menu {
+  /* end .menu ul */ }
+  .menu ul {
+    /* end .menu ul li */
+    /* highlight current page */
+    /* end current highlighters */ }
+    .menu ul li {
+      /*
+      plan your menus and drop-downs wisely.
+      */ }
+      .menu ul li a {
+        /*
+        you can use hover styles here even though this size
+        has the possibility of being a mobile device.
+        */ }
+
+/* end .menu */
+/*********************
+PROGRESS PAGE
+*********************/
+#progress .slide .content {
+  position: absolute;
+  z-index: 99;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 100px;
+  width: 1040px;
+  max-width: 100%;
+  color: #fff;
+  padding: 0 20px;
+  top: auto; }
+
+#progress-prev {
+  position: absolute;
+  top: 40%;
+  bottom: auto;
+  left: 15px;
+  z-index: 180;
+  text-decoration: none;
+  font-size: 3em; }
+
+#progress-next {
+  position: absolute;
+  top: 40%;
+  bottom: auto;
+  right: 15px;
+  z-index: 180;
+  text-decoration: none;
+  font-size: 3em; }
+
+#progress-nav {
+  position: absolute;
+  bottom: 60px;
+  z-index: 100;
+  width: 100%;
+  overflow: hidden;
+  display: block; }
+  #progress-nav ul {
+    text-align: justify;
+    width: 84%;
+    display: block;
+    margin: 0px auto;
+    z-index: 110;
+    position: relative;
+    top: 2px; }
+  #progress-nav ul:after {
+    content: '';
+    display: inline-block;
+    width: 100%; }
+  #progress-nav li {
+    display: inline-block; }
+    #progress-nav li a {
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      background: #0076a3;
+      display: block;
+      position: relative;
+      text-decoration: none; }
+      #progress-nav li a span {
+        position: absolute;
+        bottom: -30px;
+        display: block;
+        width: 150px;
+        left: -65px;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        font-family: 'Giorgio Sans Web';
+        font-size: 1.2em;
+        opacity: 0;
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        transition: all 0.4s ease; }
+    #progress-nav li a:hover span,
+    #progress-nav li a.active span {
+      opacity: 1; }
+    #progress-nav li a.active {
+      border: 1px solid #fff; }
+  #progress-nav svg {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 100%;
+    z-index: 90; }
+  #progress-nav .water {
+    stroke-dasharray: 1740;
+    stroke-dashoffset: 0; }
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+/* entry content */
+.entry-content {
+  /* at this larger size, we can start to align images */ }
+  .entry-content .alignleft, .entry-content img.alignleft {
+    margin-right: 1.5em;
+    display: inline;
+    float: left; }
+  .entry-content .alignright, .entry-content img.alignright {
+    margin-left: 1.5em;
+    display: inline;
+    float: right; }
+  .entry-content .aligncenter, .entry-content img.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    clear: both; }
+
+/* end .entry-content */
+/*********************
+FOOTER STYLES
+*********************/
+/*
+check your menus here. do they look good?
+do they need tweaking?
+*/
+/* end .footer-links */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+/*
+.home {
+	.footer {
+		display: block;
+	}
+}
+*/
+.volume {
+  color: #2980b9;
+  display: block;
+  font-size: 1.8em;
+  position: absolute;
+  z-index: 999999;
+  left: 20px;
+  top: 10px; }
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+.wrap {
+  width: 760px; }
+
+/*********************
+HEADER STYLES
+*********************/
+#logo {
+  max-width: 180px;
+  padding: .25em .5em; }
+
+body.home #logo {
+  display: none; }
+
+body.home #main-nav li {
+  display: none; }
+
+/*********************
+NAVIGATION STYLES
+*********************/
+#menu_toggle {
+  display: none; }
+
+.nav {
+  border: 0;
+  width: auto;
+  right: 5%;
+  left: auto;
+  background: none;
+  display: block !important;
+  top: .5em;
+  /* end .menu ul li */
+  /* highlight current page */
+  /* end current highlighters */ }
+  .nav ul {
+    background: #011926;
+    margin-top: 0; }
+  .nav li {
+    float: left;
+    position: relative;
+    width: auto;
+    /*
+    plan your menus and drop-downs wisely.
+    */
+    /* showing sub-menus */ }
+    .nav li a {
+      border-bottom: 0;
+      text-shadow: 1px 1px 2px #999;
+      padding: .5em;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+      /*
+      you can use hover styles here even though this size
+      has the possibility of being a mobile device.
+      */ }
+      .nav li a:hover, .nav li a:focus {
+        color: #2980b9;
+        text-shadow: none;
+        background: none; }
+    .nav li ul.sub-menu,
+    .nav li ul.children {
+      margin-top: 0;
+      border: 1px solid #ccc;
+      border-top: 0;
+      position: absolute;
+      visibility: hidden;
+      z-index: 8999;
+      /* highlight sub-menu current page */ }
+      .nav li ul.sub-menu li,
+      .nav li ul.children li {
+        /*
+        if you need to go deeper, go nuts
+        just remember deeper menus suck
+        for usability. k, bai.
+        */ }
+        .nav li ul.sub-menu li a,
+        .nav li ul.children li a {
+          padding-left: 10px;
+          border-right: 0;
+          display: block;
+          width: 180px;
+          border-bottom: 1px solid #ccc; }
+        .nav li ul.sub-menu li:last-child a,
+        .nav li ul.children li:last-child a {
+          border-bottom: 0; }
+        .nav li ul.sub-menu li ul,
+        .nav li ul.children li ul {
+          top: 0;
+          left: 100%; }
+    .nav li:hover > ul {
+      top: auto;
+      visibility: visible; }
+  .nav li.current-menu-item a,
+  .nav li.current_page_item a,
+  .nav li.current_page_ancestor a {
+    background-color: none;
+    color: #2980b9;
+    text-shadow: none;
+    background: none; }
+
+/* end .nav */
+.banner-break .banner-title-wrapper {
+  max-width: 50%; }
+  .banner-break .banner-title-wrapper h2 {
+    font-size: 2.5em;
+    margin: .83em 0 0.375em; }
+.banner-break .banner-content-wrapper {
+  position: absolute;
+  color: #fff; }
+
+.content-break {
+  position: relative;
+  clear: both; }
+  .content-break:before {
+    content: '';
+    position: absolute;
+    left: -35px;
+    width: 51%;
+    height: 60px;
+    top: -67px;
+    background-image: url(../images/bg-texture.jpg);
+    background-repeat: repeat;
+    -webkit-transform: skew(35deg);
+    -moz-transform: skew(35deg);
+    -o-transform: skew(35deg);
+    -ms-transform: skew(35deg);
+    transform: skew(35deg);
+    -moz-box-shadow: 6px -6px 8px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 6px -6px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 6px -6px 8px rgba(0, 0, 0, 0.4); }
+  .content-break:after {
+    content: '';
+    position: absolute;
+    right: -36px;
+    width: 51%;
+    height: 60px;
+    top: -67px;
+    background-image: url(../images/bg-texture.jpg);
+    background-repeat: repeat;
+    -webkit-transform: skew(-35deg);
+    -moz-transform: skew(-35deg);
+    -o-transform: skew(-35deg);
+    -ms-transform: skew(-35deg);
+    transform: skew(-35deg);
+    -moz-box-shadow: -5px -6px 8px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: -5px -6px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: -5px -6px 8px rgba(0, 0, 0, 0.4); }
+  .content-break .page-content-wrapper {
+    padding: 2em 0 4em; }
+    .content-break .page-content-wrapper h2 {
+      border-bottom: 2px dotted white;
+      display: inline-block; }
+    .content-break .page-content-wrapper .entry-sub-title {
+      color: #2980b9;
+      display: block;
+      max-width: 65%; }
+
+#work-local-nav {
+  padding: 0 0 2em;
+  text-align: center; }
+  #work-local-nav a {
+    font-size: 1.2em; }
+
+/* Masonry styles */
+/**
+ * Filters
+ */
+#stories-local-nav #filters li {
+  font-size: 1.2em;
+  width: 23%; }
+
+/**
+ * Grid items animation
+ */
+#tiles li div .tile_text_hover {
+  background: url(../images/river-hover-bg.jpg) repeat;
+  color: white;
+  position: absolute;
+  padding: 0 1.8em;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999999; }
+  #tiles li div .tile_text_hover h2 {
+    border-bottom: 2px dotted #fff;
+    color: white;
+    /*font-family: $proximanova;*/
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin: 0 auto;
+    padding: 1.5em 0 .5em;
+    text-decoration: none; }
+  #tiles li div .tile_text_hover p {
+    color: white;
+    display: block;
+    font-size: .9em;
+    margin: 0;
+    padding: 1em 0 .5em;
+    text-decoration: none; }
+  #tiles li div .tile_text_hover a.cta {
+    background-color: #f4eacf;
+    color: #011926;
+    /*font-family: $proximanovabold;*/
+    font-size: .9em;
+    padding: .4em;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; }
+    #tiles li div .tile_text_hover a.cta:hover {
+      color: #2980b9; }
+#tiles li div .tile_text {
+  padding: 0 1.8em; }
+  #tiles li div .tile_text h2 {
+    font-size: 1.2em; }
+#tiles li div .social-share {
+  display: block;
+  padding: .4em 0 1em; }
+
+#tiles li .tile_text_hover {
+  bottom: -100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+#tiles li:hover .tile_text_hover {
+  bottom: 0; }
+
+#tiles li .overlay {
+  filter: alpha(opactiy=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  -moz-opacity: 0;
+  -khtml-opacity: 0;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+
+#tiles li:hover .overlay {
+  filter: alpha(opactiy=70);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  -moz-opacity: 0.7;
+  -khtml-opacity: 0.7;
+  opacity: 0.7; }
+
+/******************************************************************
+frontpage
+******************************************************************/
+.watery {
+  stroke-dasharray: 1300;
+  stroke-dashoffset: 0; }
+
+#nav-dots {
+  display: block;
+  overflow: hidden; }
+
+#nav-dots .nav-dot {
+  cursor: pointer; }
+
+#slides .slide .fade-first,
+#slides .slide .fade-second,
+#slides .slide .blur {
+  opacity: 0; }
+
+#slides h2,
+#slides blockquote {
+  max-width: 960px;
+  color: #fff;
+  margin: 0 auto;
+  position: relative;
+  z-index: 100; }
+
+#slides h2 {
+  font-family: "Axy Stencil", Helvetica, Arial, sans-serif;
+  font-size: 1.5em;
+  line-height: 1;
+  text-transform: uppercase;
+  width: 80%; }
+
+#slides blockquote {
+  font-family: "Giorgio Sans Web", Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1px; }
+
+#slides .slide {
+  opacity: 0;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0; }
+
+#slides .slide.start {
+  opacity: 1; }
+
+#slides .slide.show {
+  z-index: 2; }
+
+#slides .front-container {
+  padding: none;
+  text-align: auto;
+  width: auto; }
+
+#slides .front-container blockquote {
+  font-size: 28px; }
+
+#slides .front-container h2 {
+  font-size: inherit; }
+
+#slides .slide-5 .front-container {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 0px; }
+
+#slides .slide-1 h2 {
+  text-align: center;
+  font-size: 1.8em;
+  width: 60%; }
+
+#slides .slide-1 blockquote {
+  font-size: 28px;
+  padding-top: 10%;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 50%; }
+
+#slides .slide-2 h2 {
+  font-size: 2.6em;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  width: 55%;
+  text-align: left; }
+
+#slides .slide-3 h2 {
+  font-size: 3em;
+  padding-top: 10%;
+  text-align: center; }
+
+#slides .slide-3 blockquote {
+  text-align: center;
+  width: 50%; }
+
+#slides .slide-4 h2 {
+  font-size: 3em;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  width: 50%;
+  text-align: left; }
+
+#slides .slide-5 h2 {
+  font-size: 3em;
+  margin-top: 10%;
+  text-align: center;
+  width: 40%; }
+
+#slides .bg-img {
+  /* padding: 200px; */
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-position: center center; }
+
+.home video {
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  z-index: -100;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+.video video {
+    /*
+position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+*/ }
+
+#mobile-nav-dots {
+  display: none; }
+
+/* Custom navigation dots */
+.nav-dots {
+  text-align: center;
+  position: absolute;
+  bottom: 2%;
+  height: 100%;
+  width: 25%;
+  right: 0;
+  left: inherit;
+  top: -20px;
+  z-index: 1000; }
+
+.home .addtoany_list {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  right: 0;
+  display: inline-block;
+  text-align: center;
+  z-index: 999999; }
+
+/* Content elements */
+#slides .bg-img-1 {
+  background-image: url(../images/slideshow/co-river.jpg); }
+
+#slides .bg-img-1-blur {
+  background-image: url(../images/slideshow/co-river-blur.jpg); }
+
+#slides .bg-img-2 {
+  background-image: url(../images/slideshow/dry-delta.jpg); }
+
+#slides .bg-img-2-blur {
+  background-image: url(../images/slideshow/dry-delta-blur.jpg); }
+
+#slides .bg-img-3 {
+  background-image: url(../images/slideshow/hope.jpg); }
+
+#slides .bg-img-3-blur {
+  background-image: url(../images/slideshow/hope-blur.jpg); }
+
+#slides .bg-img-4 {
+  background-image: url(../images/slideshow/breathe.jpg); }
+
+#slides .bg-img-4-blur {
+  background-image: url(../images/slideshow/breathe-blur.jpg); }
+
+#slides .bg-img-5 {
+  background-image: url(../images/slideshow/raise-the-river.jpg); }
+
+#slides .bg-img-5-blur {
+  background-image: url(../images/slideshow/raise-the-river-blur.jpg); }
+
+#slides .slide-5 .sl-btn-wrapper {
+  text-align: center; }
+
+#slides .slide-5 .sl-btn-wrapper a {
+  margin: 0 .3em; }
+
+/*********************
+PROGRESS PAGE
+*********************/
+#progress .slide .content {
+  width: 768px;
+  bottom: 150px; }
+  #progress .slide .content .title {
+    font-size: 1.2em;
+    margin: 1em 0 0; }
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+#banner img {
+  position: relative;
+  display: block;
+  height: auto; }
+#banner .banner-header {
+  position: absolute;
+  padding: 0; }
+  #banner .banner-header p {
+    max-width: 30%; }
+
+#banner-video {
+  height: 500px; }
+  #banner-video .banner-header {
+    top: 40%; }
+    #banner-video .banner-header h1 {
+      max-width: 60%;
+      padding-bottom: .2em; }
+    #banner-video .banner-header p {
+      font-size: 1.2em;
+      line-height: 1.5;
+      margin: .8em auto;
+      max-width: 30%; }
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+.sidebar {
+  /* margin-top: 2.2em; */ }
+
+.widgettitle {
+  border-bottom: 2px solid #444;
+  margin-bottom: 0.75em; }
+
+.widget {
+  padding: 0 10px;
+  margin: 2.2em 0; }
+  .widget ul li {
+    margin-bottom: 0.75em;
+    /* deep nesting */ }
+    .widget ul li ul {
+      margin-top: 0.75em;
+      padding-left: 1em; }
+
+/* links widget */
+/* meta widget */
+/* pages widget */
+/* recent-posts widget */
+/* archives widget */
+/* tag-cloud widget */
+/* calendar widget */
+/* category widget */
+/* recent-comments widget */
+/* search widget */
+/* text widget */
+/*********************
+FOOTER STYLES
+*********************/
+.footer p {
+  display: block;
+  float: none;
+  font-size: .9em; }
+.footer .copyright {
+  float: right; }
+
+.footer-nav {
+  float: left; }
+  .footer-nav li {
+    /*
+    be careful with the depth of your menus.
+    it's very rare to have multi-depth menus in
+    the footer.
+    */ }
+
+/* end .footer-nav */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+.wrap {
+  width: 1040px; }
+
+#progress .slide .content {
+  width: 1040px; }
+
+.page-template-page-work-php .wrap {
+  width: 60%; }
+
+/*********************
+OUR WORK
+*********************/
+#work-nav {
+  position: fixed;
+  top: 0px;
+  right: -30px;
+  z-index: 100;
+  display: block; }
+  #work-nav .nav-dot {
+    cursor: pointer; }
+
+#partners-grid li .tile_text_hover {
+  display: block;
+  background: url(../images/river-hover-bg.jpg) repeat;
+  color: white;
+  font-size: .8em;
+  position: absolute;
+  padding: 2.3em 1.8em;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 999999; }
+
+.footer-nav {
+  float: left; }
+  .footer-nav li {
+    /*
+    be careful with the depth of your menus.
+    it's very rare to have multi-depth menus in
+    the footer.
+    */ }
+    .footer-nav li a {
+      font-size: 1em; }
+
+/* end .footer-nav */
+/*
+you can call the larger styles if you want, but there's really no need
+*/
+/******************************************************************
+ADDITIONAL IE FIXES
+These fixes are now ONLY seen by IE, so you don't have to worry
+about using prefixes, although it's best practice. For more info
+on using Modernizr classes, check out this link:
+http://www.modernizr.com/docs/
+******************************************************************/
+/*
+For example, you can use something like:
+
+.no-textshadow .class { ... }
+
+You can also target specific versions by using the classes applied to
+the html element. These can sometimes change, so take a look inside the
+header.php file to see what they are:
+
+
+.lt-ie8 .class { ... }
+
+*/

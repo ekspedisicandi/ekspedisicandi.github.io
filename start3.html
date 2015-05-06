@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ekspedisi Candi (Temple Expedition)</title>
+    <link rel="icon" href="assets/logo.png">
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+      #save-widget {
+        width: 300px;
+        box-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 4px -1px;
+        background-color: white;
+        padding: 10px;
+        font-family: Roboto, Arial;
+        font-size: 13px;
+        margin: 15px;
+        position: fixed;
+        z-index: 1;
+      }
+    </style>
+    <link rel='stylesheet' id='bones-stylesheet-css'  href='tour/button.css' type='text/css' media='all' />
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+    <script>
+function initialize() {
+  var fenway = new google.maps.LatLng(-7.770542,110.489416);
+  var mapOptions = {
+    center: fenway,
+    zoom: 14
+  };
+  var map = new google.maps.Map(
+      document.getElementById('map-canvas'), mapOptions);
+  var panoramaOptions = {
+    position: fenway,
+    pov: {
+      heading: 34,
+      pitch: 10
+    }
+  };
+  var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), panoramaOptions);
+  map.setStreetView(panorama);
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+    <div id="save-widget">
+      <strong>Ekspedisi Candi (Temple Expedition)</strong>
+      <hr>
+      <img src="tour/paper.jpg" width="100%">
+      <p>Exploring cultural heritage VII century - X (classical period) were magnificent and high-value, works of monumental architectural culture of the Ancient Mataram in Yogyakarta. Objects of cultural heritage that is built as a shrine to honor the Hindu and Buddhist religions, and some become a place of worship until now.`</p>
+      <p><a class="m-btn red sm">See pricing options <i class="m-icon-swapright m-icon-white"></i></a></p>
+    </div>
+    <div id="map-canvas" style="width: 50%; height: 100%;float:left"></div>
+    <div id="pano" style="width: 50%; height: 100%;float:left"></div>
+  </body>
+</html>

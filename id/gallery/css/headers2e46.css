@@ -1,0 +1,446 @@
+/* Styles for full height left navigation */
+body.nav-full-height,
+body.nav-full-width {
+  padding: 0;
+}
+
+.nav-full-height .main-header {
+  width: 180px;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  margin-left: -90px;
+  z-index: 499;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.nav-full-height #branding,
+.nav-full-height #navigation,
+.nav-full-height #site-title,
+.nav-full-height #site-title a {
+  position: relative;
+  left: auto;
+  top: auto;
+  float: none;
+  max-width: none;
+  width: auto;
+  background: none;
+  box-shadow: none;
+}
+
+.nav-full-height #branding,
+.nav-full-height #navigation,
+.nav-full-height #site-title,
+.nav-full-height #site-title a {
+  margin: 0;
+}
+
+.nav-full-height #navigation ul,
+.nav-full-height #navigation ul.sf-menu > li,
+.nav-full-height #navigation ul.sf-menu > li a,
+.nav-full-height #navigation ul.sf-menu > li a span {
+  width: 100%;
+  float: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-full-height #navigation ul.sf-menu > li,
+.nav-full-height #navigation ul.sf-menu > li a,
+.nav-full-height #navigation ul.sf-menu > li a span {
+  display: block;
+}
+
+.nav-full-height #navigation {
+  padding: 0;
+  margin: 0;
+}
+
+.nav-full-height #navigation ul.sf-menu > li a {
+  padding: 10px 20px 8px;
+  clear: left;
+  border: 0 none;
+}
+
+.nav-full-height #navigation ul.sf-menu > li ul a {
+  padding: 10px 12px 8px;
+}
+
+.nav-full-height #navigation ul.sf-menu > li ul li {
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.nav-full-height #navigation ul li:hover ul,
+.nav-full-height #navigation ul li.sfHover ul {
+  left: 100%;
+  top: 0;
+  margin-left: 1px;
+}
+
+/* Hide all subs subs (4 levels deep) */
+.nav-full-height #navigation  ul li:hover li ul,
+.nav-full-height #navigation  ul li.sfHover li ul,
+.nav-full-height #navigation  ul li li:hover li ul,
+.nav-full-height #navigation  ul li li.sfHover li ul,
+.nav-full-height #navigation  ul li li li:hover li ul,
+.nav-full-height #navigation  ul li li li.sfHover li ul {
+  top: -9999em;
+}
+
+/* Displays all subs subs (4 levels deep) */
+.nav-full-height #navigation  ul li li:hover ul,
+.nav-full-height #navigation  ul li li.sfHover ul,
+.nav-full-height #navigation  ul li li li:hover ul,
+.nav-full-height #navigation  ul li li li.sfHover ul,
+.nav-full-height #navigation  ul li li li li:hover ul,
+.nav-full-height #navigation  ul li li li li.sfHover ul {
+	left: 100%;
+	top: 0;
+}
+
+
+.nav-full-height #navigation ul a.sf-with-ul:before {
+  content: "\f105";
+  font-family: "FontAwesome";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -8px;
+  font-size: 14px;
+  height: 16px;
+  line-height: 16px;
+
+}
+
+.nav-full-height #main {
+  padding: 20px;
+}
+
+.nav-full-height.page-template-template-grid-fullsize-php #main .entry-header,
+.nav-full-height.page-template-template-scroller-php #main .entry-header,
+.nav-full-height.page-template-template-fullsize-gallery-php #main .entry-header,
+.nav-full-height.page-template-template-fullsize-video-php #main .entry-header {
+  margin: 0;
+  padding: 30px 30px 0;
+  max-width: 980px;
+}
+
+.nav-full-height.page-template-template-grid-fullsize-php #main,
+.nav-full-height.page-template-template-grid-fullsize-php #primary {
+  width: auto;
+  margin-right: 0;
+}
+
+.nav-full-height #sidebar .widget {
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  margin: 0;
+}
+
+.nav-full-height #primary,
+.nav-full-height #sidebar .widget {
+  box-shadow: none;
+}
+
+.nav-full-height #controls-wrapper {
+  left: 235px;
+  right: 0;
+  width: auto;
+}
+
+.page-template-template-fullsize-video-php.nav-full-height #showtitle {
+  left: 255px;
+}
+
+@media (min-width: 481px) {
+
+  .nav-full-height .main-header {
+    width: 235px;
+    margin-left: 0;
+    left: 53px;
+  }
+
+  .nav-full-height #main {
+    padding-left: 53px;
+  }
+
+}
+
+@media (min-width: 769px) {
+
+  .nav-full-height #primary {
+    margin-left: 0;
+    margin-right: 255px;
+  }
+
+  .nav-full-height #main {
+    margin: 0;
+  }
+
+  .nav-full-height.fullsize-gallery #main {
+    max-width: none;
+  }
+
+  .nav-full-height #sidebar,
+  .nav-full-height .left-sidebar #sidebar {
+    right: 0;
+    margin: 0;
+    width: 255px;
+    top: 0;
+    border-left: 1px solid rgba(0,0,0,.65);
+  }
+
+  .page-template-template-fullsize-gallery-php.nav-full-height .left-sidebar #sidebar,
+  .page-template-template-fullsize-video-php.nav-full-height #sidebar {
+    display: none;
+  }
+
+}
+
+@media (min-width: 980px) {
+
+  .nav-full-height .main-header {
+    bottom: 40px;
+    left: 0;
+  }
+
+  .nav-full-height #main {
+    padding: 0;
+    margin-left: 236px;
+  }
+
+  .nav-full-height #thumbnails {
+    left: 236px;
+  }
+
+  .nav-full-height .fsg-arrows .fsg-arrows-prev {
+    left: 266px;
+  }
+
+  .nav-full-height .fsg-arrows .fsg-arrows-prev-left {
+    left: 20px;
+  }
+
+  .nav-full-height #welcomeTeaser {
+    left: 237px;
+    top: 0;
+    max-width: 50%;
+    width: auto;
+    margin-right: 70px;
+  }
+
+}
+
+@media (max-height: 800px) {
+
+  .nav-full-height #welcomeTeaser {
+    display: none;
+  }
+
+}
+
+/* Styles for full width top navigation */
+.nav-full-width .main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 498;
+  border-bottom: 1px solid #c73a3a;
+}
+
+.admin-bar.nav-full-width .main-header {
+  top: 32px;
+}
+
+.nav-full-width #navigation > ul {
+  padding-left: 0;
+  margin-left: 20px;
+  height: 100%;
+}
+
+.nav-full-width #site-title,
+.nav-full-width #site-title a {
+  padding: 0;
+	background: none;
+  box-shadow: none;
+  border-bottom: 0 none;
+  min-height: 60px;
+}
+
+.nav-full-width #site-title a,
+.nav-full-width #site-title .logo {
+  max-height: 100px;
+  float: none;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.nav-full-width #site-title img.logo {
+  vertical-align: middle;
+  margin: 0;
+}
+
+.nav-full-width nav#navigation,
+.nav-full-width #branding {
+  position: relative;
+  left: auto;
+  right: auto;
+  top: auto;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+
+.nav-full-width #branding {
+  margin: 0 auto;
+  min-height: 60px;
+  vertical-align: middle;
+}
+
+.nav-full-width nav#navigation {
+  position: absolute;
+  width: 100%;
+  left: 255px;
+  bottom: 0;
+  top: 0;
+  box-sizing: border-box;
+}
+
+.nav-full-width.nav-align-right nav#navigation {
+  text-align: right;
+  right: 60px;
+
+}
+
+.nav-full-width #navigation ul li {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.nav-full-width #navigation ul li a {
+  border:  0 none;
+  height: 100%;
+}
+
+.nav-full-width li.menu-item-has-children > a {
+  padding-right: 22px;
+  padding-bottom: 0;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.nav-full-width li.menu-item-has-children a > .fa {
+  margin-left: 5px;
+}
+
+.nav-full-width ul ul li.menu-item-has-children a > .fa {
+  position: absolute;
+  right: 4px;
+  top: 50%;
+  margin-top: -8px;
+  height: 16px;
+  width: 16px;
+  text-align: center;
+  line-height: 16px;
+}
+
+
+.nav-full-width #navigation ul ul {
+  margin: 1px 0 0;
+  padding: 0;
+}
+
+.nav-full-width #navigation ul ul li {
+  line-height: 1;
+  height: auto;
+}
+
+.nav-full-width #superbgimage,
+.nav-full-width #superbgplayer {
+  top: 0;
+  bottom: 0;
+}
+
+.nav-full-width .left-sidebar #sidebar {
+  top: 80px;
+}
+
+.nav-full-width #navigation .max-megamenu-wrapper {
+  margin-top: 1px;
+  border-top: 0 none;
+}
+
+.nav-full-width #main {
+  padding: 80px 20px 0 20px;
+}
+
+.nav-full-width #welcomeTeaser {
+  margin-top: 0;
+}
+
+.nav-full-width.page-template-template-grid-fullsize-php #main .entry-header,
+.nav-full-width.page-template-template-scroller-php #main .entry-header {
+  margin: 0;
+  max-width: 980px;
+}
+
+body.nav-full-width #main {
+  margin-top: 0;
+}
+
+.nav-full-width #mobileMenuButton {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+}
+
+.nav-full-width .max-mobile-menu h3 {
+  padding-left: 72px;
+  line-height: 60px;
+  border-bottom: 1px solid #c73a3a;
+}
+
+body.nav-full-width #sidebar.inactive-sidebar {
+  display: none;
+}
+
+@media (min-width: 481px) {
+
+  .nav-full-width #branding {
+    margin: 0 0 0 60px;
+  }
+
+  .nav-full-width #welcomeTeaser {
+    left: 20px;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  .nav-full-width #site-title a,
+  .nav-full-width #site-title .logo {
+    max-height: none;
+  }
+
+}
+
+@media (min-width: 980px) {
+
+  .nav-full-width #branding {
+    margin: 0 0 0 20px;
+  }
+
+  .nav-full-width nav#navigation,
+  .nav-full-width #branding {
+    float: left;
+  }
+
+  .nav-full-width.page-template-template-grid-fullsize-php #main .entry-header,
+  .nav-full-width .page-template-template-scroller-php #main .entry-header {
+    max-width: 60%;
+  }
+
+}

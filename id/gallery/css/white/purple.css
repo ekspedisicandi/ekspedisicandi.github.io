@@ -1,0 +1,42 @@
+
+	a:link, a:visited { color: #d64ad1 }
+
+	#site-title,
+	nav#navigation ul a:hover,
+	nav#navigation ul li.sfHover a,
+	nav#navigation ul li.current-cat a,
+	nav#navigation ul li.current_page_item a,
+	nav#navigation ul li.current-menu-item a,
+	nav#navigation ul li.current-page-ancestor a,
+	#colophon,
+	#thumbnails .pulldown-items a.activeslide {
+		border-color: #d64ad1;
+	}
+
+	#thumbnails .scroll-link,
+	#fullsizeTimer,
+	.blog .date-badge,
+	.tag .date-badge,
+	.pagination a:hover,
+	.pagination span.current,
+	#showtitle .imagetitle a,
+	.loadie {
+		background-color: #d64ad1;
+	}
+
+	#expander,
+	#toggleThumbs {
+		background-color: rgba(214,74,209, 0.75);
+	}
+
+
+	nav#navigation ul ul li {
+		border-color: #ccc;
+	}
+
+	h1, h1 a:link, h1 a:visited { color: #000; }
+	h2 { color: #d64ad1; }
+	h3 { color: #444; }
+	h4 { color: #444; }
+	h5 { color: #444; }
+	h6 { color: #444; }

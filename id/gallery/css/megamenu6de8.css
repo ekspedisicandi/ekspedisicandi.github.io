@@ -1,0 +1,297 @@
+/*---------------------------------------------------------------------------*/
+/*  Megamenu
+/*---------------------------------------------------------------------------*/
+#navigation .max-megamenu-wrapper.col-span-1 {
+  width: 192px;
+}
+
+#navigation .max-megamenu-wrapper.col-span-2 {
+  width: 384px;
+}
+
+#navigation .max-megamenu-wrapper.col-span-3 {
+  width: 576px;
+}
+
+#navigation .max-megamenu-wrapper {
+  width: 768px;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 1px;
+}
+
+#navigation .max-megamenu-holder,
+#navigation .max-megamenu,
+#navigation .max-megamenu-submenu,
+#navigation .sub-menu {
+  padding: 0;
+  list-style: none;
+  vertical-align: top;
+}
+
+#navigation .max-megamenu-title {
+  line-height: 25px;
+  padding: 20px 16px 15px;
+  font-size: 21px;
+  margin-bottom: 0;
+  border-bottom: 1px dotted transparent;
+}
+
+#navigation .max-megamenu-title a:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+#navigation .max-megamenu-icon,
+#navigation .max-megamenu-bullet,
+#navigation .max-megamenu-widgets-container {
+  display: none;
+}
+
+#navigation .mobile-nav-item .max-megamenu-icon,
+#navigation .mobile-nav-item .max-megamenu-bullet{
+  display: none;
+}
+
+#navigation .text-menu-icon {
+  position: absolute;
+}
+
+#navigation .menu-text {
+  margin-left: 23px;
+}
+
+#navigation .mobile-nav-item .max-megamenu-wrapper .row {
+  padding: 0;
+}
+
+#navigation .mobile-nav-item .max-megamenu-title {
+    font-weight: normal;
+    margin: 0;
+}
+
+@media (min-width: 940px) {
+  #navigation .max-megamenu-wrapper.col-span-1 {
+    width: 235px;
+  }
+  #navigation .max-megamenu-wrapper.col-span-2 {
+    width: 470px;
+  }
+  #navigation .max-megamenu-wrapper.col-span-3 {
+    width: 705px;
+  }
+  #navigation .max-megamenu-wrapper {
+    width: 940px;
+  }
+}
+
+@media (min-width: 768px) {
+  #navigation .max-megamenu-wrapper {
+    position: absolute;
+    left: 0;
+    z-index: 20000;
+    top: -999px;
+  }
+
+  #navigation .max-megamenu-wrapper a:hover {
+    color: #333;
+  }
+
+  #navigation .max-megamenu-holder {
+    width: 100% !important;
+    padding: 0;
+  }
+
+  #navigation .max-megamenu-wrapper .sub-menu {
+    padding: 0;
+    list-style: none;
+  }
+
+  #navigation .max-megamenu-wrapper .sub-menu.deep-level a {
+  padding-left: 49px  !important;
+  }
+
+  #navigation .max-megamenu-wrapper .sub-menu.deep-level .deep-level a {
+  padding-left: 64px !important;
+  }
+
+  #navigation .max-megamenu {
+    display: table;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+  }
+
+  #navigation .max-megamenu-submenu {
+    display: table-cell;
+    float: none;
+    border-right-width: 1px;
+    border-style: dotted;
+    border-bottom: 0 none;
+  }
+
+#navigation .max-megamenu-border {
+  border-bottom-width: 1px;
+  border-style: dotted;
+}
+
+  #navigation .max-megamenu-submenu .max-megamenu-icon img {
+    margin-top: -3px;
+  }
+
+  #navigation .max-megamenu-submenu:nth-child(4n) {
+    border-right: none;
+  }
+
+  #navigation .max-megamenu-icon,
+  .max-megamenu-icon {
+    display: inline;
+    margin-right: 12px;
+  }
+
+  #navigation .max-megamenu-icon img,
+  .max-megamenu-icon img {
+    margin-top: -2px;
+    max-height: 15px;
+    vertical-align: middle;
+  }
+
+  #navigation .max-megamenu-bullet {
+    display: block;
+    float: left;
+    margin-top: 6px;
+    margin-right: 10px;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    border-left: 3px solid #555;
+    height: 0;
+    width: 0;
+  }
+
+  #navigation .max-megamenu-wrapper .max-megamenu-widgets-container {
+    margin-bottom: 10px;
+    color: #333 !important;
+    font-size: 13px !important;
+  }
+
+  #navigation .max-megamenu-wrapper .max-megamenu-widgets-container.second-level-widget {
+    padding: 0 34px;
+  }
+
+}
+
+#navigation li.max-megamenu-menu {
+  position: static;
+}
+
+#navigation li.sfHover .max-megamenu-wrapper {
+  overflow: auto;
+  opacity: 1;
+  top: 100%;
+}
+
+#navigation .max-megamenu-wrapper * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+#navigation .max-megamenu-wrapper .fa {
+  vertical-align: middle;
+  margin: 0;
+}
+
+#navigation .max-megamenu-wrapper h3.max-megamenu-title .fa {
+  font-size: 15px;
+  line-height: 1;
+}
+
+#navigation .max-megamenu-wrapper .row {
+    clear: both;
+}
+
+#navigation .max-navbar-nav .max-megamenu-wrapper .max-megamenu-holder .max-megamenu .max-megamenu-submenu {
+  display: table-cell !important;
+  float: none !important;
+}
+
+#navigation .max-megamenu-wrapper .max-megamenu {
+  border-top: none !important;
+}
+
+#navigation .max-navbar-nav .max-megamenu-wrapper ul {
+  position: relative !important;
+  top: auto;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#navigation .max-navbar-nav .max-megamenu-wrapper ul ul{
+  display: table !important;
+  table-layout: fixed;
+  width: 100% !important;
+  top: 0;
+  left: 0;
+}
+
+#navigation .max-navbar-nav .max-megamenu-wrapper ul ul ul.sub-menu{
+  border: none !important;
+  background: none !important;
+  display: block !important;
+}
+
+
+#navigation .max-navbar-nav .max-megamenu-wrapper li ul li li{
+  display: block !important;
+}
+
+#navigation .max-navbar-nav .max-megamenu-wrapper li a,
+#navigation .max-navbar-nav .max-megamenu-wrapper li ul li a {
+  border-bottom: none !important;
+}
+
+#navigation .max-navbar-nav .max-megamenu-wrapper li:hover > ul {
+  display: table;
+}
+
+#navigation .max-navbar-nav .max-megamenu-wrapper ul li:hover ul{
+  left: 0 !important;
+  top: 0 !important;
+}
+
+#navigation .max-megamenu-wrapper .max-megamenu-widgets-container a {
+  display:inline!important;
+  padding:0!important;
+  background: none !important;
+  border: none !important;
+}
+
+/* mega menu RTL styles */
+.rtl #navigation .max-megamenu-wrapper {
+  left: auto;
+  right: 0;
+}
+
+.rtl #navigation .max-megamenu-wrapper .max-megamenu-icon, .rtl .max-megamenu-icon {
+  margin-left: 9px;
+  margin-right: 0;
+}
+
+.rtl #navigation .max-megamenu-wrapper .max-megamenu-submenu {
+    border-left: 1px dotted #fff;
+    border-right: 0;
+}
+
+.rtl #navigation .max-navbar-nav .max-megamenu-wrapper ul li:hover ul {
+  right: 0 !important;
+}
+
+
+.rtl #navigation .max-megamenu-wrapper .max-megamenu-bullet, .rtl .max-megamenu-bullet {
+    border-left: none;
+    border-right: 3px solid #555;
+    float: right;
+    margin-left: 10px;
+    margin-right: 0;
+}

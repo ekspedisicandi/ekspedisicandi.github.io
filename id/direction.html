@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Ekspedisi Candi (Temple Expedition)</title>
+    <link rel="icon" href="../assets/logo.png">
+    <style>
+      html, body, #map-canvas {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+      }
+      #panel {
+        position: absolute;
+        top: 5px;
+        left: 50%;
+        margin-left: -180px;
+        z-index: 5;
+        background-color: #D91E18;
+        padding: 5px;
+        border: 1px solid #999;
+        color: #fff;
+      }
+      #panelku {
+        position: absolute;
+        top: 37px;
+        left: 50%;
+        margin-left: -133px;
+        z-index: 5;
+        padding: 5px;
+        background-color: #fff;
+        border: 1px solid #999;
+        color:#D91E18;
+        font-size: 0.66em;
+      }
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+    <script>
+var directionsDisplay;
+var directionsService = new google.maps.DirectionsService();
+var map;
+
+function initialize() {
+  directionsDisplay = new google.maps.DirectionsRenderer();
+  var yogyakarta = new google.maps.LatLng(-7.7849777,110.3793234);
+  var mapOptions = {
+    zoom:13,
+    center: yogyakarta
+  };
+  map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+  directionsDisplay.setMap(map);
+}
+
+function calcRoute() {
+  var start = document.getElementById('start').value;
+  var end = document.getElementById('end').value;
+  var request = {
+      origin:start,
+      destination:end,
+      travelMode: google.maps.TravelMode.DRIVING
+  };
+  directionsService.route(request, function(response, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+      directionsDisplay.setDirections(response);
+    }
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+    </script>
+  </head>
+  <body>
+    <div id="panel">
+    <b>Start: </b>
+    <select id="start" onchange="calcRoute();">
+      <option value="-7.77271,110.401128">Yogyakarta</option>
+      <option value="-7.810360,110.468620">Abang Temple</option>
+      <option value="-8.080496,113.299075">Agung Temple</option>
+      <option value="-7.527404,110.351657">Asu Sengi Temple</option>
+      <option value="-7.957782,112.598608">Badut Temple</option>
+      <option value="-7.567726,112.398746">Bajangratu Temple</option>
+      <option value="-7.777990,110.494077">Banyunibo Temple</option>
+      <option value="-7.775686,110.497350">Barong Temple</option>
+      <option value="-7.607873800000000000,110.203751300000020000">Borobudur Temple</option>
+	  <option value="-7.746538,110.492910">Bubrah Temple</option>
+	  <option value="-7.759223,110.481854">Bugisan Arca Site</option>
+	  <option value="-7.95848074995289,110.565316929118">Butuh Temple</option>
+	  <option value="-7.757211,110.396423">Condongcatur Site</option>
+	  <option value="-7.774323,110.497508">Dawangsari Site</option>
+      <option value="-7.205223,109.906885">Dieng (arjuna) Temple</option>
+	  <option value="-7.743978,110.496143">Gana (Asu) Temple</option>
+	  <option value="-7.926490,110.319183">Ganjuran Temple</option>
+	  <option value="-7.835656,110.437252">Gampingan Temple</option>
+	  <option value="-7.749618,110.415891">Gebang Temple</option>
+	  <option value="-7.210760,110.342185">Gedong Songo Temple</option>
+	  <option value="-8.007931,110.340969">Gembirawati Temple</option>
+	  <option value="-7.602187,110.283277">Gunung Sari Temple</option>
+	  <option value="-7.634244,110.296749">Gunung Wukir Temple</option>
+	  <option value="-7.586849,112.733459">Gununggangsir Temple</option>
+	  <option value="-7.783776,110.512115">Ijo Temple</option>
+	  <option value="-7.735268,113.471651">Jabung Temple</option>
+	  <option value="-7.662498,112.669910">Jawi Temple</option>
+	  <option value="-7.664444,110.505833">Kaliworo Temple Complex</option>
+	  <option value="-8.025647,112.708480">Kidal Temple</option>
+	  <option value="-7.748136,110.492914">Lumbung Temple</option>
+      <option value="-7.771527,110.490738">Queen Boko Palace</option>
+      <option value="-7.755359,110.445959">Kadisoka Temple</option>
+      <option value="-7.767273,110.472357">Kalasan Temple</option>
+      <option value="-7.677217,110.557110">Karangnongko Temple</option>
+      <option value="-7.757960,110.469583">Kedulan Temple</option>
+      <option value="-7.688380,110.415379">Kimpulan Temple</option>
+      <option value="-7.197588,109.910842">Margasari Temple</option>
+      <option value="-7.683381,110.468291">Morangan Temple</option>
+      <option value="-7.6878674110329,110.466590141492">Morangan Shelter Temple</option>
+      <option value="-7.604803,110.230132">Mendut Temple</option>
+      <option value="-7.771062,110.506061">Miri Temple</option>
+      <option value="-7.665833,110.505000">Ngemplakseneng Temple</option>
+      <option value="-7.776383,110.489627">Palgading Temple</option>
+      <option value="-8.016437,112.209732">Panataran Temple</option>
+      <option value="-7.606117,110.219550">Pawon Temple</option>
+      <option value="-7.525693,110.351914">Pendem Temple</option>
+      <option value="-7.75774988945569,110.126478030362">Petirtaan Boto Putih</option>
+      <option value="-7.83345803978132,110.457816885147">Petirtaan Payak Site</option>
+      <option value="-7.740831,110.504616">Plaosan Temple</option>
+      <option value="-7.786885,110.489960">Polangan Temple</option>
+	  <option value="-7.752023200000000000,110.491368800000030000">Prambanan Temple</option>
+	  <option value="-7.71073096350802,110.160214122154">Pringtali Site</option>
+	  <option value="-7.673699,112.342983">Rimbi Temple</option>
+	  <option value="-7.762473,110.447131">Sambisari Temple</option>
+	  <option value="-7.761527,110.474274">Sari Temple</option>
+	  <option value="-8.098810,112.235314">Sawentar Temple</option>
+	  <option value="-7.887799,112.663826">Singosari Temple</option>
+	  <option value="-7.204854,109.905256">Setyaki Temple</option>
+	  <option value="-7.743928,110.492851">Sewu Temple</option>
+	  <option value="-7.761151,110.496080">Sojiwan Temple</option>
+	  <option value="-7.205035,109.906921">Srikandi Temple</option>
+	  <option value="-7.855387,112.644731">Sumberawan Temple</option>
+	  <option value="-7.746182,112.218060">Surawana Temple</option>
+	  <option value="-7.734648,112.161194">Tegowangi Temple</option>
+	  <option value="-7.571755,112.403525">Tikus Temple</option>
+	  <option value="-8.005791,112.764159">Utama Temple</option>
+	  <option value="-7.542062,112.391076">Wringinlawang Temple</option>
+    </select>
+    <b>End: </b>
+    <select id="end" onchange="calcRoute();">
+      <option value="-7.810360,110.468620">Abang Temple</option>
+      <option value="-8.080496,113.299075">Agung Temple</option>
+      <option value="-7.527404,110.351657">Asu Sengi Temple</option>
+      <option value="-7.957782,112.598608">Badut Temple</option>
+      <option value="-7.567726,112.398746">Bajangratu Temple</option>
+      <option value="-7.777990,110.494077">Banyunibo Temple</option>
+      <option value="-7.775686,110.497350">Barong Temple</option>
+      <option value="-7.607873800000000000,110.203751300000020000">Borobudur Temple</option>
+	  <option value="-7.746538,110.492910">Bubrah Temple</option>
+	  <option value="-7.759223,110.481854">Bugisan Arca Site</option>
+	  <option value="-7.95848074995289,110.565316929118">Butuh Temple</option>
+	  <option value="-7.757211,110.396423">Condongcatur Site</option>
+	  <option value="-7.774323,110.497508">Dawangsari Site</option>
+      <option value="-7.205223,109.906885">Dieng (arjuna) Temple</option>
+	  <option value="-7.743978,110.496143">Gana (Asu) Temple</option>
+	  <option value="-7.926490,110.319183">Ganjuran Temple</option>
+	  <option value="-7.835656,110.437252">Gampingan Temple</option>
+	  <option value="-7.749618,110.415891">Gebang Temple</option>
+	  <option value="-7.210760,110.342185">Gedong Songo Temple</option>
+	  <option value="-8.007931,110.340969">Gembirawati Temple</option>
+	  <option value="-7.602187,110.283277">Gunung Sari Temple</option>
+	  <option value="-7.634244,110.296749">Gunung Wukir Temple</option>
+	  <option value="-7.586849,112.733459">Gununggangsir Temple</option>
+	  <option value="-7.783776,110.512115">Ijo Temple</option>
+	  <option value="-7.735268,113.471651">Jabung Temple</option>
+	  <option value="-7.662498,112.669910">Jawi Temple</option>
+	  <option value="-7.664444,110.505833">Kaliworo Temple Complex</option>
+	  <option value="-8.025647,112.708480">Kidal Temple</option>
+	  <option value="-7.748136,110.492914">Lumbung Temple</option>
+      <option value="-7.771527,110.490738">Queen Boko Palace</option>
+      <option value="-7.755359,110.445959">Kadisoka Temple</option>
+      <option value="-7.767273,110.472357">Kalasan Temple</option>
+      <option value="-7.677217,110.557110">Karangnongko Temple</option>
+      <option value="-7.757960,110.469583">Kedulan Temple</option>
+      <option value="-7.688380,110.415379">Kimpulan Temple</option>
+      <option value="-7.197588,109.910842">Margasari Temple</option>
+      <option value="-7.683381,110.468291">Morangan Temple</option>
+      <option value="-7.6878674110329,110.466590141492">Morangan Shelter Temple</option>
+      <option value="-7.604803,110.230132">Mendut Temple</option>
+      <option value="-7.771062,110.506061">Miri Temple</option>
+      <option value="-7.665833,110.505000">Ngemplakseneng Temple</option>
+      <option value="-7.776383,110.489627">Palgading Temple</option>
+      <option value="-8.016437,112.209732">Panataran Temple</option>
+      <option value="-7.606117,110.219550">Pawon Temple</option>
+      <option value="-7.525693,110.351914">Pendem Temple</option>
+      <option value="-7.75774988945569,110.126478030362">Petirtaan Boto Putih</option>
+      <option value="-7.83345803978132,110.457816885147">Petirtaan Payak Site</option>
+      <option value="-7.740831,110.504616">Plaosan Temple</option>
+      <option value="-7.786885,110.489960">Polangan Temple</option>
+	  <option value="-7.752023200000000000,110.491368800000030000">Prambanan Temple</option>
+	  <option value="-7.71073096350802,110.160214122154">Pringtali Site</option>
+	  <option value="-7.673699,112.342983">Rimbi Temple</option>
+	  <option value="-7.762473,110.447131">Sambisari Temple</option>
+	  <option value="-7.761527,110.474274">Sari Temple</option>
+	  <option value="-8.098810,112.235314">Sawentar Temple</option>
+	  <option value="-7.887799,112.663826">Singosari Temple</option>
+	  <option value="-7.204854,109.905256">Setyaki Temple</option>
+	  <option value="-7.743928,110.492851">Sewu Temple</option>
+	  <option value="-7.761151,110.496080">Sojiwan Temple</option>
+	  <option value="-7.205035,109.906921">Srikandi Temple</option>
+	  <option value="-7.855387,112.644731">Sumberawan Temple</option>
+	  <option value="-7.746182,112.218060">Surawana Temple</option>
+	  <option value="-7.734648,112.161194">Tegowangi Temple</option>
+	  <option value="-7.571755,112.403525">Tikus Temple</option>
+	  <option value="-8.005791,112.764159">Utama Temple</option>
+	  <option value="-7.542062,112.391076">Wringinlawang Temple</option>
+    </select>
+    </div>
+    <div id="panelku">
+    Start from Team Ekspedisi Candi (Temple Expedition) Indonesia Office, Yogyakarta
+    </div>
+    <div id="map-canvas"></div>
+  </body>
+</html>

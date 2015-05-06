@@ -1,0 +1,50 @@
+	a:link, a:visited,
+	.max-megamenu-title,
+	#navigation ul ul.sub-menu li a:hover {
+		color: #ffffff
+	}
+
+	#site-title,
+	nav#navigation ul a:hover,
+	nav#navigation ul li.sfHover a,
+	nav#navigation ul li.current-cat a,
+	nav#navigation ul li.current_page_item a,
+	nav#navigation ul li.current-menu-item a,
+	nav#navigation ul li.current-menu-parent a,
+	nav#navigation ul li.current-page-ancestor a,
+	#colophon,
+	#thumbnails .pulldown-items a.activeslide,
+	#navigation .max-megamenu-wrapper,
+	#navigation .sub-menu {
+		border-color: #c83b3b;
+	}
+
+	#thumbnails .scroll-link,
+	#fullsizeTimer,
+	.blog .date-badge,
+	.tag .date-badge,
+	.pagination a:hover,
+	.pagination span.current,
+	#showtitle .imagetitle a,
+	.max-mobile-menu li.parent-link a,
+	.loadie {
+		background-color: #c83b3b;
+	}
+
+	.max-mobile-menu li.parent-link a:link,
+	.max-mobile-menu li.parent-link a:visited {
+		color: #fff;
+	}
+
+
+	#expander,
+	#toggleThumbs {
+		background-color: rgba(200,59,59, 0.75);
+	}
+
+	h1, h1 a:link, h1 a:visited { color: #ffffff; }
+	h2 { color: #c83b3b; }
+	h3 { color: #eeeeee; }
+	h4 { color: #eeeeee; }
+	h5 { color: #eeeeee; }
+	h6 { color: #eeeeee; }
